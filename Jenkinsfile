@@ -53,7 +53,7 @@ pipeline {
     }
     stage('Functional Test') {
       steps {
-        sh 'echo "Add sonar settings here"'
+        sh 'echo "Add sonar funtional test settings here"'
       }
     }
     stage('Deploy to Stage') {
