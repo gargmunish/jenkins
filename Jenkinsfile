@@ -5,19 +5,19 @@ pipeline {
       parallel {
         stage('Sonar') {
           steps {
-            sh '''hello
+            sh '''echo "Add sonar settings here"
 '''
           }
         }
         stage('PMD') {
           steps {
-            sh '''none
+            sh '''echo "Add PMD settings here"
 '''
           }
         }
         stage('Check Style') {
           steps {
-            sh '## Add Check style here'
+            sh 'echo "Add checkstyle settings here"'
           }
         }
       }
@@ -26,58 +26,58 @@ pipeline {
       parallel {
         stage('Build-BusinessService') {
           steps {
-            sh 'mvn clean install'
+            sh 'echo "mvn clean install"'
           }
         }
         stage('Build Data Service') {
           steps {
-            sh 'mvn clean install'
+            sh 'echo "mvn clean install"'
           }
         }
       }
     }
     stage('Deploy to Dev') {
       steps {
-        sh '## add Test here'
+        sh 'echo "Deploy settings here"'
       }
     }
     stage('Unit Test') {
       steps {
-        sh '## Add Test Step here'
+        sh 'echo "Add sonar settings here"'
       }
     }
     stage('Deploy to Release') {
       steps {
-        sh '## Deploy to release'
+        sh 'echo "Add sonar settings here"'
       }
     }
     stage('Functional Test') {
       steps {
-        sh '# Add functional Test'
+        sh 'echo "Add sonar settings here"'
       }
     }
     stage('Deploy to Stage') {
       steps {
-        sh '# Deploy to Stage box'
+        sh 'echo "Add sonar settings here"'
       }
     }
     stage('Performance Test') {
       parallel {
         stage('Performance Test') {
           steps {
-            sh '## Add Lisa Test'
+            sh 'echo "Add sonar settings here"'
           }
         }
         stage('UAT Test') {
           steps {
-            sh '## Add Lisa Test'
+            sh 'echo "Add sonar settings here"'
           }
         }
       }
     }
     stage('Deploy to Prod') {
       steps {
-        sh '## Add prod to Deploy'
+        sh 'echo "Add sonar settings here"'
       }
     }
   }
