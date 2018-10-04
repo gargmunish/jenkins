@@ -10,19 +10,19 @@ pipeline {
       parallel {
         stage('Sonar') {
           steps {
-            sh 'echo add sonar scan here.'
+            sh ''
 '''
           }
         }
         stage('PMD') {
           steps {
-            sh 'echo add sonar scan here.'
+            sh ''
 '''
           }
         }
         stage('Check Style') {
           steps {
-            sh 'echo add sonar scan here.'
+            sh ''
           }
         }
       }
