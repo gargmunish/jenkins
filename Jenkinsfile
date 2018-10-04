@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('src checkout') {
       steps {
-        git(url: 'https://github.com/gargmunish/jenkins', branch: 'Master')
+        git(url: 'https://github.com/gargmunish/jenkins', branch: 'Master', credentialsId: 'github')
       }
     }
   }
