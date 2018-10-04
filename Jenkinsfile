@@ -11,13 +11,11 @@ pipeline {
         stage('Sonar') {
           steps {
             sh ''
-'''
           }
         }
         stage('PMD') {
           steps {
             sh ''
-'''
           }
         }
         stage('Check Style') {
