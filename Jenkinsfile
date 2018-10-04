@@ -6,7 +6,7 @@ pipeline {
         git(url: 'https://github.com/gargmunish/jenkins', branch: 'master')
       }
     }
-    stage('Sonar') {
+    stage('Code Scan') {
       parallel {
         stage('Sonar') {
           steps {
