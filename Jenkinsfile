@@ -1,26 +1,26 @@
 pipeline {
   agent any
   stages {
-  stage('src') {
+    stage('src checkout') {
       steps {
         git(url: 'https://github.com/gargmunish/jenkins', branch: 'master')
       }
     }
     stage('Sonar') {
       parallel {
-        stage('Sonar') {
+        stage('sonar') {
           steps {
-            sh ''
+            sh 'echo "Sonar"'
           }
         }
         stage('PMD') {
           steps {
-            sh ''
+            sh 'echo "PMD"'
           }
         }
         stage('Check Style') {
           steps {
-            sh ''
+            sh 'echo "checkstyle"'
           }
         }
       }
