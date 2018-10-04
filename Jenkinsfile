@@ -1,14 +1,14 @@
 pipeline {
   agent any
   stages {
-    stage('src checkout') {
+    stage('Source Checkout') {
       steps {
         git(url: 'https://github.com/gargmunish/jenkins', branch: 'master')
       }
     }
     stage('Sonar') {
       parallel {
-        stage('sonar') {
+        stage('Sonar') {
           steps {
             sh 'echo "Sonar"'
           }
